@@ -43,6 +43,18 @@ install_pkgs_from_list() {
     exit 1
 }
 
+determine_init_system() {
+    case "$OS" in
+    'void')
+        INIT='runit'
+        ;;
+    *)
+        warn 'Init system support not implemented'
+        exit 1
+        ;;
+    esac
+}
+
 setup_services() {
     warn 'Not Implemented: setup_services()'
     exit 1
