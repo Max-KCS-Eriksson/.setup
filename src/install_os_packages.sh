@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-source "$(dirname "$0")"/helpers/output_labels.sh
+ROOT_DIR=$(dirname "$0")/..
+
+source "$ROOT_DIR"/src/helpers/output_labels.sh
 
 determine_os() {
     if [ -f /etc/os-release ]; then
