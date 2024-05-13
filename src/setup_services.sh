@@ -22,8 +22,9 @@ determine_init_system() {
 }
 
 setup_services() {
-    warn 'Not Implemented: setup_services()'
-    exit 1
+    if [[ $INIT ]]; then
+        bash ./src/services/"$INIT"/services.sh
+    fi
 }
 
 determine_os
