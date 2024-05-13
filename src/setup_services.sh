@@ -10,6 +10,10 @@ determine_init_system() {
     'void')
         INIT='runit'
         ;;
+    '')
+        warn 'Cannot determine init system'
+        exit 1
+        ;;
     *)
         warn 'Init system support not implemented'
         exit 1
