@@ -51,25 +51,6 @@ install_pkgs_from_list() {
     fi
 }
 
-determine_init_system() {
-    case "$OS" in
-    'void')
-        INIT='runit'
-        ;;
-    *)
-        warn 'Init system support not implemented'
-        exit 1
-        ;;
-    esac
-}
-
-setup_services() {
-    warn 'Not Implemented: setup_services()'
-    exit 1
-}
-
 determine_os
 set_pkg_manager_commands
 install_pkgs_from_list
-determine_init_system
-setup_services
