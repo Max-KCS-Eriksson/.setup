@@ -16,14 +16,14 @@ set_pkg_manager_commands() {
     case "$OS" in
     'void')
         update() {
-            sudo xbps-install -Su xbps
+            sudo xbps-install -Su --yes xbps
             # XBPS must use a separate transaction to update itself. If your update
             # includes the `xbps` package, a second update is required to apply the rest
             # of the updates.
-            sudo xbps-install -Su
+            sudo xbps-install -Su --yes
         }
         install() {
-            sudo xbps-install "$@"
+            sudo xbps-install --yes "$@"
         }
 
         # Install extra Qtile widget dependencies.
