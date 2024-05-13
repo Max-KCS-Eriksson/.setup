@@ -2,17 +2,8 @@
 
 ROOT_DIR=$(dirname "$0")/..
 
+source "$ROOT_DIR"/src/helpers/determine_os.sh
 source "$ROOT_DIR"/src/helpers/output_labels.sh
-
-determine_os() {
-    if [ -f /etc/os-release ]; then
-        source /etc/os-release
-        OS=$(echo "$NAME" | awk '{print tolower($0)}')
-    else
-        warn 'Cannot determine OS'
-        exit 1
-    fi
-}
 
 set_pkg_manager_commands() {
     case "$OS" in
