@@ -41,8 +41,23 @@ set_pkg_manager_commands() {
 }
 
 install_pkgs_from_list() {
-    warn 'Not Implemented: install_pkgs_from_list()'
-    exit 1
+    PACKAGE_LIST=$ROOT_DIR/resources/distro/"$OS"/packages.txt
+    if [[ -f $PACKAGE_LIST ]]; then
+        # Update package manager
+        note "Updating package manager using: \n$(declare -f update)"
+        note 'Enter password'
+        update
+
+        # Install from package list
+        note "Installing packages using: \n$(declare -f install)"
+        while read package; do
+            install "$package"
+        done <"$PACKAGE_LIST"
+    else
+        warn 'Missing list of packages'
+        warn "  Couldn't locate $PACKAGE_LIST"
+        exit 1
+    fi
 }
 
 determine_init_system() {
