@@ -14,3 +14,14 @@ install_os_packages() {
     fi
 }
 install_os_packages
+
+# Set up system services
+setup_services() {
+    if bash "$HERE"/src/setup_services.sh; then
+        ok 'Sytem services setup'
+    else
+        warn 'Error setting up system services'
+        exit 1
+    fi
+}
+setup_services
