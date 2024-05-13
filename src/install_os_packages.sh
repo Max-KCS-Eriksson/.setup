@@ -24,6 +24,10 @@ set_pkg_manager_commands() {
         pip install bs4 --break-system-packages
         pip install selenium --break-system-packages
         ;;
+    '')
+        warn 'Cannot determine OS'
+        exit 1
+        ;;
     *)
         warn 'OS support not implemented'
         exit 1
