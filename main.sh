@@ -29,7 +29,7 @@ setup_services
 # Install extra tools
 install_extra_tools() {
     if bash "$HERE"/src/extras/install_extra_tools.sh; then
-        ok 'Extra tools installed'
+        ok 'Installed and set up extra tools'
         note 'Additional configuration for extra tools may be needed'
         note 'This can include extending $PATH and other environmental variables, or'
         note 'setting various `eval $(<package> init - )` in the shell configuration'
