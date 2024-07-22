@@ -13,8 +13,17 @@ install_tool() {
     fi
 }
 
+# Setup installed tools
+# Place script in the `./setup` dir to setup tools handled by the package manager.
+for tool in "$HERE"/setup/*; do
+    if [[ -f $tool ]]; then
+        install_tool "$tool"
+    fi
+done
+
 # Install extra tools
-# Place script to install and setup a tool in the `tools` dir.
+# Place script in the `./tools` dir to install and setup tools that are not handled by
+# the package manager.
 for tool in "$HERE"/tools/*; do
     if [[ -f $tool ]]; then
         install_tool "$tool"
