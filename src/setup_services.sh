@@ -23,7 +23,7 @@ determine_init_system() {
 
 setup_services() {
     if [[ $INIT ]]; then
-        bash ./src/services/"$INIT"/services.sh
+        bash "$ROOT_DIR"/src/services/"$INIT"/services.sh
     fi
 }
 
