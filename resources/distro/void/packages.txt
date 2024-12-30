@@ -21,6 +21,7 @@ dbus
 delta
 dmenu
 docker
+dunst
 elogind
 feh
 firefox
