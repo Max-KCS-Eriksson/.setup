@@ -25,7 +25,6 @@ ENSURE_INSTALLED=(
     python@3.9
     python@3.10
     python@3.11
-    python@latest
     java@adoptopenjdk-8
     java@11
     java@17
