@@ -10,7 +10,7 @@ source "$ROOT_DIR"/src/helpers/output_labels.sh
 GLOBALS_USED=(
     node@lts
     lua@latest
-    luaJIT@latest
+    luajit@latest
     go@latest
     rust@stable
     java@lts
