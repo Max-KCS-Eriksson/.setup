@@ -12,7 +12,7 @@ GLOBALS_USED=(
     lua@latest
     luajit@latest
     go@latest
-    java@lts
+    java@21
     maven@latest
     gradle@latest
     spring-boot@latest
@@ -29,7 +29,6 @@ ENSURE_INSTALLED=(
     java@adoptopenjdk-8
     java@11
     java@17
-    java@latest
 )
 
 # Check that `mise` is installed
