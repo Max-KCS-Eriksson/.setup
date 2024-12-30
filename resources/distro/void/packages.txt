@@ -13,6 +13,7 @@ bluez
 bluez-alsa
 brightnessctl
 bzip2-devel
+cargo
 cups
 cups-pdf
 cups-pk-helper

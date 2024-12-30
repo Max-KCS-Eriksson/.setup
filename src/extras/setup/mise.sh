@@ -12,7 +12,6 @@ GLOBALS_USED=(
     lua@latest
     luajit@latest
     go@latest
-    rust@stable
     java@lts
     maven@latest
     gradle@latest
