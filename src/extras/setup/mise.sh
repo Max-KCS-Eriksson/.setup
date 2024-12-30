@@ -17,7 +17,6 @@ GLOBALS_USED=(
     gradle@latest
     spring-boot@latest
     sqlite@latest
-    mysql@latest
 )
 
 # Install only
