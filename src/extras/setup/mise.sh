@@ -4,7 +4,7 @@ ROOT_DIR=$(dirname "$0")/../../..
 source "$ROOT_DIR"/src/helpers/output_labels.sh
 
 # Runtime executor
-# https://github.com/jdxcode/mise
+# https://github.com/jdx/mise
 
 # Install and use globally
 GLOBALS_USED=(
