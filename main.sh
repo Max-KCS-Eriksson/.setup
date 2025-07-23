@@ -38,3 +38,16 @@ extra_setup() {
     fi
 }
 extra_setup
+
+# Configure kernel modules
+blacklist_modules() {
+    blacklist_filename='blacklist.conf'
+    blacklist=(
+        'pcspkr'
+    )
+
+    for mod in "${blacklist[@]}"; do
+        echo "blacklist $mod" | sudo tee /etc/modprobe.d/"$blacklist_filename"
+    done
+}
+blacklist_modules
