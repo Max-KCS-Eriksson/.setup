@@ -13,7 +13,7 @@ fi
 # Check that `navi` can be built from source
 if ! command -v cargo &>/dev/null; then
     warn 'command not found: cargo'
-    warn 'mise cannot be built from source'
+    warn 'navi cannot be built from source'
     exit 1
 fi
 
